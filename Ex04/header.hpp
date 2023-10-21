@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:22:25 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/20 17:31:49 by kkouaz           ###   ########.fr       */
+/*   Created: 2023/10/21 22:57:28 by kkouaz            #+#    #+#             */
+/*   Updated: 2023/10/21 22:59:36 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#ifndef HEADER_HPP 
+#define HEADER_HPP
 
+int check(std :: string filename, std :: string s1, std :: string s2);
 
-int main()
-{
-    // Weapon  club = Weapon("crude spiked club");
-    //  HumanA bob("Bob", club);
-    // bob.attack();
-    // club.setType("some other type of club");
-    // bob.attack();
-
- 
-
-Weapon  club = Weapon("crude spiked club");
-HumanB jim("Jim");
-jim.setWeapon(club);
-jim.attack();
-club.setType("some other type of club");
-jim.attack();
- return 0; 
-}
+#endif

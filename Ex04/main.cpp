@@ -5,30 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:22:25 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/20 17:31:49 by kkouaz           ###   ########.fr       */
+/*   Created: 2023/10/21 21:50:28 by kkouaz            #+#    #+#             */
+/*   Updated: 2023/10/21 23:27:09 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include<iostream>
+#include "header.hpp"
+#include <fstream>
 
-
-int main()
+int main(int ac, char **av)
 {
-    // Weapon  club = Weapon("crude spiked club");
-    //  HumanA bob("Bob", club);
-    // bob.attack();
-    // club.setType("some other type of club");
-    // bob.attack();
+    std :: string content;
+    std :: string line;
 
- 
-
-Weapon  club = Weapon("crude spiked club");
-HumanB jim("Jim");
-jim.setWeapon(club);
-jim.attack();
-club.setType("some other type of club");
-jim.attack();
- return 0; 
+    if(ac < 4)
+    {
+        std :: cerr << "invalid arguments \n";
+        return(0);
+    }
+    if(check(av[1], av[2], av[3]))
+        return(0);
+    std::ifstream fd(av[1]);
+    if(!fd.is_open())
+    {
+        std :: cerr << "enable to open the file \n";
+        return(1);
+    }
+    while(std :: getline(fd, line))
+    {
+        content += line + "\n";
+    }
+    
 }

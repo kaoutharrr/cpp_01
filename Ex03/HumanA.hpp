@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:36:54 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/13 00:54:43 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/20 17:33:09 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanA
         Weapon Weapon1;
         std :: string name;
     public :
-        HumanA(Weapon W);
+        HumanA(std :: string str ,Weapon& W);
         void attack(void);
 };
 #endif

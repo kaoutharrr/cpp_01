@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:46:58 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/13 00:58:19 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/20 17:53:53 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@
 class HumanB
 {
     private:
-        Weapon Weapon1;
+        Weapon *Weapon1;
         std :: string name;
     public :
+        HumanB(std :: string str);
+        void setWeapon(Weapon& W);
         void attack(void);
 };
 #endif

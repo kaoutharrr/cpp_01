@@ -5,27 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/13 00:18:29 by kkouaz            #+#    #+#              #
-#    Updated: 2023/10/20 17:55:27 by kkouaz           ###   ########.fr        #
+#    Created: 2023/10/20 17:55:48 by kkouaz            #+#    #+#              #
+#    Updated: 2023/10/21 22:57:21 by kkouaz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Ex03
+NAME = Ex04
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
-SRC = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
+SRC = main.cpp utils.cpp
 OBJ = $(SRC:.cpp=.o)
+
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
-clean :
+clean : 
 	$(RM) $(OBJ)
 
-fclean : clean 
+fclean : clean
 	$(RM) $(NAME)
 
-re : fclean all 
+re : fclean all

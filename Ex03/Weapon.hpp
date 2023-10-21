@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:24:15 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/13 00:53:30 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/19 16:02:39 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ class Weapon
     private:
         std :: string type;
     public :
-       const  std :: string &getType(void);
+        Weapon(std :: string str);
+        const std::string& getType();
         void setType(std :: string newType);
 };
 #endif

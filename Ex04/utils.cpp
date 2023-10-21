@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   utils.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:22:25 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/20 17:31:49 by kkouaz           ###   ########.fr       */
+/*   Created: 2023/10/21 22:04:07 by kkouaz            #+#    #+#             */
+/*   Updated: 2023/10/21 22:09:33 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include <iostream>
 
-
-int main()
+int check(std :: string filename, std :: string s1, std :: string s2)
 {
-    // Weapon  club = Weapon("crude spiked club");
-    //  HumanA bob("Bob", club);
-    // bob.attack();
-    // club.setType("some other type of club");
-    // bob.attack();
-
- 
-
-Weapon  club = Weapon("crude spiked club");
-HumanB jim("Jim");
-jim.setWeapon(club);
-jim.attack();
-club.setType("some other type of club");
-jim.attack();
- return 0; 
+    if(filename.empty())
+        std :: cerr << "invalid file name !!" << std :: endl ;
+    if(s1.empty() || s2.empty())
+        std :: cerr << "invaid arguments !! \n";
+    else
+        return(0);
+    return(1);
 }
