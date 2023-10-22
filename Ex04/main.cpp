@@ -6,19 +6,20 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 21:50:28 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/21 23:27:09 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/22 21:00:02 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<iostream>
 #include "header.hpp"
 #include <fstream>
+#include<string>
 
 int main(int ac, char **av)
 {
     std :: string content;
     std :: string line;
-
+    std ::string  newContent;
     if(ac < 4)
     {
         std :: cerr << "invalid arguments \n";
@@ -36,5 +37,20 @@ int main(int ac, char **av)
     {
         content += line + "\n";
     }
-    
+    fd.close();
+    size_t pos = content.find(av[2]);
+    if(pos != std :: string :: npos)
+        newContent = myReplace(content, av[2], av[3], pos);
+    else
+        newContent = content;
+   std :: string fileName = av[1];
+   fileName += ".replace" ;
+    std :: ofstream newFd(fileName);
+    if(!newFd.is_open())
+    {
+        std :: cerr << "unable to open the outfile \n";
+        return(1);
+    }
+    newFd << newContent ;
+   newFd.close();
 }
