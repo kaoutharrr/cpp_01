@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/24 18:50:23 by kkouaz            #+#    #+#              #
-#    Updated: 2023/10/24 19:54:59 by kkouaz           ###   ########.fr        #
+#    Created: 2023/10/24 19:55:57 by kkouaz            #+#    #+#              #
+#    Updated: 2023/10/24 21:01:12 by kkouaz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Ex05
+NAME = harlFilter
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
@@ -22,7 +22,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
-clean :
+clean : 
 	$(RM) $(OBJ)
 
 fclean : clean
