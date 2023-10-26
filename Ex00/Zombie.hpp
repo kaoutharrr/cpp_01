@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:11:02 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/11 19:59:56 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/25 22:41:35 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Zombie
     public :
 
         Zombie(std :: string N);
-
         void announce( void );
+        ~Zombie(void);
 };
 
 Zombie* newZombie( std::string name );

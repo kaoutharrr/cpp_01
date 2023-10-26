@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:53:14 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/24 19:05:02 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/26 05:34:23 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,5 @@ void  Harl :: complain( std::string level )
         }
         i++;
     }
-    std :: cout << "not a valid message\n";
-    
+    std :: cout << "not a valid message" << std :: endl;
 }

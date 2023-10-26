@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:46:58 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/20 17:53:53 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/26 02:53:46 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ class HumanB
         HumanB(std :: string str);
         void setWeapon(Weapon& W);
         void attack(void);
+        ~HumanB();
 };
 #endif

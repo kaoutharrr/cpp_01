@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:15:10 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/24 18:16:55 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/26 02:52:09 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Harl
     public :
         void    complain( std::string level );
        
-    
 };
 
 
