@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:45:35 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/26 05:44:18 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/27 03:05:47 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,20 +53,11 @@ void  Harl :: complain( std::string level )
             {
                 case 0 :
                     debug();
-                    break;
                 case 1:
-                    debug();
                     info();
-                    break;
                 case 2:
-                    debug();
-                    info();
                     warning();
-                    break;
                 case 3:
-                    debug();
-                    info();
-                    warning();
                     error();
                     break;
                 default:
