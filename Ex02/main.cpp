@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:03:55 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/26 05:41:15 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/28 03:54:07 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,4 @@ int main()
     std :: cout << "The value pointed to by stringPTR.: " << *stringPTR << std :: endl;
     std :: cout << "The value pointed to by stringREF : " << stringREF << std :: endl;
 
-    
-    
-    
 }

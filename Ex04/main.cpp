@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 21:50:28 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/27 03:43:28 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/28 04:15:39 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int main(int ac, char **av)
     std :: string line;
     std ::string  newContent;
     std :: string str;
-    str = av[3];
+    str = av[2];
     if (ac < 4)
     {
         std :: cerr << "invalid arguments " << std :: endl;
         return(0);
     }
-    if(check(av[1], av[2], av[3]))
-        return(0);
+    // if(check(av[1], av[2], av[3]))
+    //     return(0);
     std::ifstream fd(av[1]);
     if(!fd.is_open())
     {
@@ -40,17 +40,23 @@ int main(int ac, char **av)
         content += line + "\n";
     }
     fd.close();
-    size_t pos =content.find(av[2]);
-      while(pos != std :: string :: npos)
-      {
-         newContent += myReplace(content, av[2], av[3], pos);
-       // newContent =  content.replace(av[2], 1, av[3]);
-        // newContent = content.replace(pos, 1, av[3]);
-         pos = content.find(av[2], pos + str.length());
-   // }
-        //      else
-        // newContent = content;
-     }
+    int start = 0;
+    if(str.empty())
+        newContent = content;
+    else
+    {
+        size_t pos = content.find(av[2]);
+        if( pos == std :: string :: npos)
+            newContent = content;
+        while(pos != std :: string :: npos)
+        {
+            newContent  += myReplace(content, av[3], pos, start);
+            start = pos + str.length();
+            pos = content.find(av[2], start);
+            if(pos == std :: string :: npos)
+                newContent += content.substr(start);
+        }
+    }
    std :: string fileName = av[1];
    fileName += ".replace" ;
     std :: ofstream newFd(fileName);

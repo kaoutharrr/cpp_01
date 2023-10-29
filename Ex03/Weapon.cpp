@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 00:32:58 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/27 02:59:05 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/28 03:55:31 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ Weapon :: Weapon(std :: string str)
 
 const std::string& Weapon :: getType()
 {
-    
     return(type);
 }
 
 void Weapon :: setType(std :: string newType)
 {
-    std :: cout << "where is the error ??\n ";
     type = newType;
 }
 

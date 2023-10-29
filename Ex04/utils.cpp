@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 22:04:07 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/10/27 03:56:14 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/10/28 04:06:34 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ int check(std :: string filename, std :: string s1, std :: string s2)
     return(1);
 }
 
-std ::string    myReplace(std :: string Content , std ::string s1, std ::string s2, int pos)
+std ::string    myReplace(std :: string Content , std ::string s2, int pos, int start)
 {
     std :: string newText;
-   // newText = Content.substr(s2.length() + pos, pos);
-    newText = s2;
-    newText += Content.substr(pos + s1.length() , Content.length());
+   newText = Content.substr(start, pos - start);
+    newText += s2;
     return(newText);
 }
